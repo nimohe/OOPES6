@@ -1,11 +1,9 @@
-class Drone {
-    constructor(id,name) {
-        this.id=id;
-        this.name=name;
-        console.log('in drone constructor');
-    }
-}
+import {Car} from './classes/car.js'
+import {Drone} from './classes/drone.js'
 
-let drone = new Drone('A123','Flyer');
+let c = new Car();
+let d = new Drone();
 
-console.log(typeof drone);
+
+console.log(c);
+console.log(d);
