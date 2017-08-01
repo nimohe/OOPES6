@@ -9,12 +9,10 @@ export class DataTable extends BaseElement {
     }
     
     getElementString() {
-        
         let thTags = '';
         for (let h of this.headers) {
             thTags += `<th class="mdl-data-table__cell--non-numeric">${h}</th>\n`;
         }
-        
         let trTags = '';
         for (let row of this.data) {
             trTags += `<tr>`;
@@ -24,12 +22,14 @@ export class DataTable extends BaseElement {
                 trTags += `<td class="mdl-data-table__cell--non-numeric">
                              ${field}
                            </td>
+                
                           `;
             }
             trTags += '</tr>';
         }
         
         return `
+       
             <table class="mdl-data-table mdl-js-data-table mdl-shadow--2dp">
                 <thead>
                     <tr>
